@@ -1,0 +1,22 @@
+<svg width="420" height="120" viewBox="0 0 420 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="20" y1="20" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F4B5C9"/>
+      <stop offset="1" stop-color="#D73369"/>
+    </linearGradient>
+    <linearGradient id="grad2" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FFF3F7"/>
+      <stop offset="1" stop-color="#FEE7ED"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="8" y="8" width="96" height="96" rx="28" fill="url(#grad1)"/>
+  <path d="M75 30C57.3269 30 43 43.4315 43 60.5C43 77.5685 57.3269 91 75 91H79.5C82.5376 91 85 88.5376 85 85.5C85 82.4624 82.5376 80 79.5 80H75C64.5063 80 56 71.5063 56 61C56 50.4937 64.5063 42 75 42H79.5C82.5376 42 85 39.5376 85 36.5C85 33.4624 82.5376 31 79.5 31H75Z" fill="url(#grad2)"/>
+  <path d="M64 55C64 49.4772 68.4772 45 74 45C79.5228 45 84 49.4772 84 55" stroke="#FDF1F5" stroke-width="6" stroke-linecap="round"/>
+
+  <g transform="translate(126 20)">
+    <text x="0" y="36" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" letter-spacing="1.5" fill="#1F1F1F">ADONACREM</text>
+    <text x="2" y="64" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="600" letter-spacing="5" fill="#C24069">BEAUTY</text>
+    <line x1="0" y1="72" x2="188" y2="72" stroke="#F0D5DE" stroke-width="2"/>
+  </g>
+</svg>
