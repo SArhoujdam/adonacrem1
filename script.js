@@ -37,7 +37,7 @@ const products = [
   },
 ];
 
-const phoneNumber = '212666721338';
+const phoneNumber = '212787324470';
 const productGrid = document.getElementById('productGrid');
 
 const formatPrice = (value) => `${value.toFixed(2).replace('.', ',')} DH`;
