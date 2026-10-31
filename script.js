@@ -40,18 +40,20 @@ const products = [
 const phoneNumber = '212666721338';
 const productGrid = document.getElementById('productGrid');
 
+const formatPrice = (value) => `${value.toFixed(2).replace('.', ',')} DH`;
+
 const createProductCard = (product) => {
   const card = document.createElement('article');
   card.className = 'product-card';
 
-  const buttonText = `Bonjour, je souhaite commander ${product.name} au prix de ${product.price.toFixed(2)} €.`;
+  const buttonText = `Bonjour, je souhaite commander ${product.name} au prix de ${formatPrice(product.price)}.`;
 
   card.innerHTML = `
     <div class="product-image" aria-label="${product.name}"></div>
     <div class="product-info">
       <div class="product-meta">
         <span class="tag">${product.category}</span>
-        <span class="price">${product.price.toFixed(2)} €</span>
+        <span class="price">${formatPrice(product.price)}</span>
       </div>
       <h3>${product.name}</h3>
       <p>${product.description}</p>
