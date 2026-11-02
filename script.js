@@ -2,15 +2,8 @@ const products = [
   {
     name: 'GEL LIMPIADOR FACIAL',
     category: 'Nettoyage',
-<<<<<<< HEAD
-    price: 67,
-    description: 'Gel nettoyant doux pour un visage frais, net et lumineux.',
-    image:
-      'https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=900&q=80',
-=======
     price: 66.84,
     description: 'Gel nettoyant doux pour un visage frais, net et lumineux.',
->>>>>>> c88e171 (Initial commit)
   },
   {
     name: 'LOCIÓN HIDRATA',
@@ -101,49 +94,22 @@ const products = [
     category: 'Hygiène',
     price: 48.13,
     description: 'Blanchisseur dentaire pour un sourire éclatant.',
-<<<<<<< HEAD
-    image:
-      'https://images.unsplash.com/photo-1588776814546-da5a6c6f6d8d?auto=format&fit=crop&w=900&q=80',
-=======
->>>>>>> c88e171 (Initial commit)
   },
   {
     name: 'AROMA DE VAINILLA',
     category: 'Parfum',
     price: 53.48,
     description: 'Senteur douce et gourmande de vanille.',
-<<<<<<< HEAD
-    image:
-      'https://images.unsplash.com/photo-1602872029706-8e5f4a5e3a2a?auto=format&fit=crop&w=900&q=80',
-=======
->>>>>>> c88e171 (Initial commit)
   },
   {
     name: 'ACEITE ALMENDRAS',
     category: 'Beauté',
     price: 90.91,
     description: 'Huile nourrissante pour hydrater et sublimer la peau.',
-<<<<<<< HEAD
-    image:
-      'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=900&q=80',
-=======
->>>>>>> c88e171 (Initial commit)
   },
   {
     name: 'LOCIÓN PEDICULICIDA',
     category: 'Soin',
-<<<<<<< HEAD
-    price: null,
-    description: 'Produit spécifique à confirmer pour le prix exact.',
-    image:
-      'https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=900&q=80',
-  },
-];
-
-const phoneNumber = '212787324470';
-const productGrid = document.getElementById('productGrid');
-
-=======
     price: 140.37,
     description: 'Produit spécifique pour un soin complet et renforcé.',
   },
@@ -249,7 +215,6 @@ const createProductModal = () => {
 
 const productModal = createProductModal();
 
->>>>>>> c88e171 (Initial commit)
 const formatPrice = (value) => {
   if (value === null || value === undefined || Number.isNaN(Number(value))) {
     return 'Prix sur demande';
@@ -265,11 +230,7 @@ const createProductCard = (product) => {
   const buttonText = `Bonjour, je souhaite commander ${product.name} au prix de ${formatPrice(product.price)}.`;
   const imageMarkup = product.image
     ? `<img src="${product.image}" alt="${product.name}" class="product-image-img" />`
-<<<<<<< HEAD
-    : '';
-=======
     : '<div class="product-image-placeholder">Image bientôt</div>';
->>>>>>> c88e171 (Initial commit)
 
   card.innerHTML = `
     <div class="product-image" aria-label="${product.name}">${imageMarkup}</div>
@@ -287,22 +248,12 @@ const createProductCard = (product) => {
   `;
 
   const button = card.querySelector('.order-btn');
-<<<<<<< HEAD
-  button.addEventListener('click', () => {
-=======
   button.addEventListener('click', (event) => {
     event.stopPropagation();
->>>>>>> c88e171 (Initial commit)
     const message = encodeURIComponent(buttonText);
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   });
 
-<<<<<<< HEAD
-  return card;
-};
-
-products.forEach((product) => {
-=======
   card.addEventListener('click', (event) => {
     if (event.target.closest('.order-btn')) {
       return;
@@ -314,6 +265,5 @@ products.forEach((product) => {
 };
 
 productList.forEach((product) => {
->>>>>>> c88e171 (Initial commit)
   productGrid.appendChild(createProductCard(product));
 });
