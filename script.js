@@ -96,24 +96,32 @@ const products = [
     category: 'Hygiène',
     price: 48.13,
     description: 'Blanchisseur dentaire pour un sourire éclatant.',
+    image:
+      'https://images.unsplash.com/photo-1588776814546-da5a6c6f6d8d?auto=format&fit=crop&w=900&q=80',
   },
   {
     name: 'AROMA DE VAINILLA',
     category: 'Parfum',
     price: 53.48,
     description: 'Senteur douce et gourmande de vanille.',
+    image:
+      'https://images.unsplash.com/photo-1602872029706-8e5f4a5e3a2a?auto=format&fit=crop&w=900&q=80',
   },
   {
     name: 'ACEITE ALMENDRAS',
     category: 'Beauté',
     price: 90.91,
     description: 'Huile nourrissante pour hydrater et sublimer la peau.',
+    image:
+      'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=900&q=80',
   },
   {
     name: 'LOCIÓN PEDICULICIDA',
     category: 'Soin',
     price: null,
     description: 'Produit spécifique à confirmer pour le prix exact.',
+    image:
+      'https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=900&q=80',
   },
 ];
 
