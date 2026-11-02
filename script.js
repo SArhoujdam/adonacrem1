@@ -146,15 +146,25 @@ const phoneNumber = '212787324470';
 const productGrid = document.getElementById('productGrid');
 const productSearchInput = document.getElementById('productSearch');
 const productResultsCount = document.getElementById('productResultsCount');
+const currentPage = document.body.dataset.page || 'home';
+
+const getProductsForPage = () => {
+  if (currentPage === 'promos') {
+    return productList.filter((product) => product.price >= 70 || product.category === 'Parfum');
+  }
+
+  return productList;
+};
 
 const getVisibleProducts = (query = '') => {
   const normalizedQuery = query.trim().toLowerCase();
+  const pageProducts = getProductsForPage();
 
   if (!normalizedQuery) {
-    return productList;
+    return pageProducts;
   }
 
-  return productList.filter((product) => {
+  return pageProducts.filter((product) => {
     const name = product.name.toLowerCase();
     const category = product.category.toLowerCase();
 
@@ -163,12 +173,18 @@ const getVisibleProducts = (query = '') => {
 };
 
 const renderProducts = (query = '') => {
+  if (!productGrid) {
+    return;
+  }
+
   const visibleProducts = getVisibleProducts(query);
   productGrid.innerHTML = '';
 
   if (!visibleProducts.length) {
     productGrid.innerHTML = '<div class="product-empty">Aucun produit trouvé pour cette recherche.</div>';
-    productResultsCount.textContent = '0 résultat';
+    if (productResultsCount) {
+      productResultsCount.textContent = '0 résultat';
+    }
     return;
   }
 
@@ -176,8 +192,10 @@ const renderProducts = (query = '') => {
     productGrid.appendChild(createProductCard(product));
   });
 
-  const label = visibleProducts.length > 1 ? 'résultats' : 'résultat';
-  productResultsCount.textContent = `${visibleProducts.length} ${label} trouvé(s)`;
+  if (productResultsCount) {
+    const label = visibleProducts.length > 1 ? 'résultats' : 'résultat';
+    productResultsCount.textContent = `${visibleProducts.length} ${label} trouvé(s)`;
+  }
 };
 
 const createProductModal = () => {
@@ -299,8 +317,12 @@ const createProductCard = (product) => {
   return card;
 };
 
-productSearchInput.addEventListener('input', (event) => {
-  renderProducts(event.target.value);
-});
+if (productSearchInput) {
+  productSearchInput.addEventListener('input', (event) => {
+    renderProducts(event.target.value);
+  });
+}
 
-renderProducts();
+if (productGrid) {
+  renderProducts();
+}
