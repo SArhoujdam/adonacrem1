@@ -92,6 +92,20 @@
           <p class="eyebrow">Nos best sellers</p>
           <h2>Produits cosmétique</h2>
         </div>
+        <div class="container product-toolbar">
+          <label class="search-field" for="productSearch">
+            <span class="search-label">Rechercher un produit</span>
+            <input
+              id="productSearch"
+              type="search"
+              placeholder="Cherchez par nom ou catégorie..."
+              aria-label="Rechercher un produit"
+            />
+          </label>
+        </div>
+        <div class="container product-results">
+          <p id="productResultsCount" aria-live="polite"></p>
+        </div>
         <div class="container product-grid" id="productGrid"></div>
       </section>
     </main>

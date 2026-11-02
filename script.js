@@ -128,7 +128,7 @@ const productImages = [
   'product/WhatsApp Image 2026-11-01 at 15.45.47.jpeg',
   'product/WhatsApp Image 2026-11-01 at 15.48.01.jpeg',
   'product/WhatsApp Image 2026-11-01 at 15.50.47.jpeg',
-  'product/WhatsApp Image 2026-11-01 at 15.56.38.jpeg',
+  'https://adonacrem.netlify.app/product/WhatsApp%20Image%202026-11-01%20at%2015.56.38.jpeg',
   'product/WhatsApp Image 2026-11-01 at 15.59.52.jpeg',
   'product/WhatsApp Image 2026-11-01 at 16.03.02.jpeg',
   'product/WhatsApp Image 2026-11-01 at 16.04.38.jpeg',
@@ -144,6 +144,41 @@ const productList = products.map((product, index) => ({
 
 const phoneNumber = '212787324470';
 const productGrid = document.getElementById('productGrid');
+const productSearchInput = document.getElementById('productSearch');
+const productResultsCount = document.getElementById('productResultsCount');
+
+const getVisibleProducts = (query = '') => {
+  const normalizedQuery = query.trim().toLowerCase();
+
+  if (!normalizedQuery) {
+    return productList;
+  }
+
+  return productList.filter((product) => {
+    const name = product.name.toLowerCase();
+    const category = product.category.toLowerCase();
+
+    return name.includes(normalizedQuery) || category.includes(normalizedQuery);
+  });
+};
+
+const renderProducts = (query = '') => {
+  const visibleProducts = getVisibleProducts(query);
+  productGrid.innerHTML = '';
+
+  if (!visibleProducts.length) {
+    productGrid.innerHTML = '<div class="product-empty">Aucun produit trouvé pour cette recherche.</div>';
+    productResultsCount.textContent = '0 résultat';
+    return;
+  }
+
+  visibleProducts.forEach((product) => {
+    productGrid.appendChild(createProductCard(product));
+  });
+
+  const label = visibleProducts.length > 1 ? 'résultats' : 'résultat';
+  productResultsCount.textContent = `${visibleProducts.length} ${label} trouvé(s)`;
+};
 
 const createProductModal = () => {
   const modal = document.createElement('div');
@@ -264,6 +299,8 @@ const createProductCard = (product) => {
   return card;
 };
 
-productList.forEach((product) => {
-  productGrid.appendChild(createProductCard(product));
+productSearchInput.addEventListener('input', (event) => {
+  renderProducts(event.target.value);
 });
+
+renderProducts();
