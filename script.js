@@ -1,35 +1,35 @@
 const products = [
-  { name: 'Gel nettoyant visage', category: 'Nettoyage', price: 66.84, stockStatus: 'on-order', description: 'Nettoie en douceur la peau, la laisse fraîche et lumineuse. / يزيل الأوساخ بحنان ويترك البشرة نظيفة، ناعمة ومشرقة.', image: 'product/WhatsApp Image 2026-11-01 at 15.15.13.jpeg' },
-  { name: 'Lotion hydratante', category: 'Soin', price: 50.8, stockStatus: 'on-order', description: 'Lotion douce qui hydrate en profondeur et apaise la peau. / لوشن لطيف يرطب البشرة بعمق ويهدئها ويمنحها راحة.', image: 'product/WhatsApp Image 2026-11-01 at 15.16.48.jpeg' },
-  { name: 'Gel crème hygiénique', category: 'Hygiène', price: 34.76, stockStatus: 'on-order', description: 'Formule douce pour un confort quotidien et une hygiène délicate. / تركيبة لطيفة للحفاظ على النظافة اليومية مع راحة ونعومة.', image: 'product/WhatsApp Image 2026-11-01 at 15.21.20.jpeg' },
-  { name: 'Tonique vitamine C', category: 'Soin', price: 85.56, stockStatus: 'on-order', description: 'Tonique éclat qui revitalise la peau et lui redonne de l’éclat. / تونك مضيء يعيد الحيوية إلى البشرة ويمنحها إشراقة طبيعية.', image: 'product/WhatsApp Image 2026-11-01 at 15.25.22.jpeg' },
-  { name: 'Parfum H&B Vanille', category: 'Parfum', price: 104.28, stockStatus: 'in-stock', description: 'Parfum doux et gourmand à la senteur de vanille. / عطر ناعم ورائع برائحة الفانيلا الدافئة والحلوة.', image: 'product/WhatsApp Image 2026-11-01 at 15.30.52.jpeg' },
-  { name: 'Vitamine C + Zinc', category: 'Soin', price: 52.14, stockStatus: 'on-order', description: 'Complément beauté pour un teint lumineux et une peau confortable. / مزيج مغذي يساعد على إضفاء لمعان طبيعي على البشرة ويحافظ على راحتها.', image: 'product/WhatsApp Image 2026-11-01 at 15.34.25.jpeg' },
-  { name: 'Magnésium effervescent', category: 'Bien-être', price: 48, stockStatus: 'in-stock', stockDate: '10/11/2026', stockQuantity: 4, description: 'Idéal pour un moment de bien-être au quotidien. / منتج مثالي لدعم الراحة اليومية والهدوء والنعاس.', image: 'product/WhatsApp Image 2026-11-01 at 15.37.54.jpeg' },
-  { name: 'Eau de parfum Diamond', category: 'Parfum', price: 46, stockStatus: 'in-stock', stockDate: '10/11/2026', stockQuantity: 5, description: 'Parfum élégant et sensuel pour toute la journée. / عطر أنيق ورائع يمنحك الثقة والجاذبية طوال اليوم.', image: 'product/WhatsApp Image 2026-11-01 at 15.40.01.jpeg' },
-  { name: 'Crème pour les pieds à l’urée', category: 'Soin des pieds', price: 29.41, stockStatus: 'on-order', description: 'Crème nourrissante pour des pieds doux, souples et bien hydratés. / كريم مغذي يهدئ القدمين ويمنحهما نعومة وترطيب عميق.', image: 'product/WhatsApp Image 2026-11-01 at 15.43.10.jpeg' },
-  { name: 'Hydratant pour les pieds', category: 'Soin des pieds', price: 29.41, stockStatus: 'on-order', description: 'Hydratation intense pour des pieds doux et bien entretenus. / ترطيب قوي يساعد على الحفاظ على نعومة القدمين وجمال مظهرهما.', image: 'product/WhatsApp Image 2026-11-01 at 15.45.47.jpeg' },
-  { name: 'Crème mains à l’aloe vera', category: 'Soin des mains', price: 33, stockStatus: 'in-stock', stockDate: '10/11/2026', stockQuantity: 4, description: 'Crème mains apaisante et protectrice pour une peau douce. / كريم يدين مهدئ ومرطب يساعد على حماية البشرة ونعومتها.', image: 'product/WhatsApp Image 2026-11-01 at 15.48.01.jpeg' },
-  { name: 'Shampooing protecteur', category: 'Cheveux', price: 72.19, stockStatus: 'in-stock', description: 'Shampooing qui protège les cheveux et leur donne brillance et souplesse. / شامبو يحمي الشعر من الجفاف ويمنحه لمعانًا ونضارة ونعومة.', image: 'product/WhatsApp Image 2026-11-01 at 15.50.47.jpeg' },
-  { name: 'Lotion corporelle', category: 'Corps', price: 70.86, stockStatus: 'on-order', description: 'Lotion hydratante pour une peau souple et visiblement plus douce. / لوشن للجسم يرطب البشرة ويتركها ناعمة ومرنة طوال اليوم.', image: 'product/WhatsApp Image 2026-11-01 at 15.56.38.jpeg' },
-  { name: 'Déodorant crème', category: 'Hygiène', price: 45.45, stockStatus: 'on-order', description: 'Déodorant confort durable pour rester frais toute la journée. / مزيل رائحة مريح يوفر حماية طويلة ويمنح إحساسًا بنظافة مستمرة.', image: 'product/WhatsApp Image 2026-11-01 at 15.59.52.jpeg' },
-  { name: 'Bicarbonate blanchissant', category: 'Beauté', price: 34, stockStatus: 'in-stock', stockDate: '10/11/2026', stockQuantity: 4, description: 'Produit doux et efficace pour l’entretien quotidien. / منتج لطيف وفعال للعناية اليومية ويمنح البشرة مظهرًا مشرقًا.', image: 'product/WhatsApp Image 2026-11-01 at 16.03.02.jpeg' },
-  { name: 'Blanchisseur dentaire', category: 'Hygiène', price: 48.13, stockStatus: 'on-order', description: 'Pour un sourire plus éclatant et une sensation de propreté. / يساعد على إضفاء لمعان أبيض على الأسنان مع إحساس بالنظافة.', image: 'product/WhatsApp Image 2026-11-01 at 16.04.38.jpeg' },
-  { name: 'Parfum vanille', category: 'Parfum', price: 79, stockStatus: 'in-stock', stockDate: '10/11/2026', stockQuantity: 5, description: 'Senteur douce et gourmande qui accompagne votre routine quotidienne. / رائحة فانيلا دافئة وناعمة تضيف إحساسًا مريحًا وأنيقًا يوميًا.', image: 'product/WhatsApp Image 2026-11-01 at 16.08.39.jpeg' },
-  { name: 'Huile d’amande', category: 'Beauté', price: 90.91, stockStatus: 'on-order', description: 'Huile nourrissante pour hydrater et sublimer la peau. / زيت مغذي يساعد على ترطيب البشرة وتحسين مظهرها بشكل طبيعي.', image: 'product/WhatsApp Image 2026-11-01 at 16.12.26.jpeg' },
-  { name: 'Lotion pédicure', category: 'Soin', price: 140.37, stockStatus: 'on-order', description: 'Soin ciblé pour un confort optimal et un esprit tranquille. / علاج متخصص يساعد على الحفاظ على الراحة والنظافة الصحية.', image: 'product/WhatsApp Image 2026-11-01 at 16.18.59.jpeg' },
-  { name: 'Deo Roll-On Aloe', category: 'Hygiène', price: 31, stockStatus: 'in-stock', stockDate: '10/11/2026', stockQuantity: 10, description: 'Déodorant roll-on à l’aloe vera.', image: 'product/WhatsApp Image 2026-11-11 at 21.52.45.jpeg' },
-  { name: 'Lait nettoyant visage', category: 'Nettoyage', price: 41, stockStatus: 'in-stock', stockDate: '10/11/2026', stockQuantity: 4, description: 'Lait nettoyant doux pour le visage.', image: 'product/WhatsApp Image 2026-11-11 at 21.52.45 (1).jpeg' },
-  { name: "Masque huile d'argan", category: 'Soin', price: 55, stockStatus: 'in-stock', stockDate: '10/11/2026', stockQuantity: 2, description: "Masque nourrissant à l'huile d'argan.", image: 'product/WhatsApp Image 2026-11-11 at 21.52.45 (2).jpeg' },
-  { name: 'Eau faciale avoine', category: 'Soin', price: 62, stockStatus: 'in-stock', stockDate: '10/11/2026', stockQuantity: 4, description: 'Eau faciale douce à l’avoine.', image: 'product/WhatsApp Image 2026-11-11 at 21.52.45 (3).jpeg' },
-  { name: 'Stick Jelly', category: 'Soin', price: 96, stockStatus: 'in-stock', stockDate: '10/11/2026', stockQuantity: 2, description: 'Soin visage en stick jelly.', image: 'product/placeholder.jpg' },
-  { name: 'Lotion anti-chute', category: 'Cheveux', price: 113, stockStatus: 'in-stock', stockDate: '10/11/2026', stockQuantity: 4, description: 'Lotion de soin pour cheveux.', image: 'product/WhatsApp Image 2026-11-11 at 21.52.45 (7).jpeg' },
-  { name: 'Shampooing anti-chute', category: 'Cheveux', price: 47, stockStatus: 'in-stock', stockDate: '10/11/2026', stockQuantity: 4, description: 'Shampooing de soin pour cheveux.', image: 'product/WhatsApp Image 2026-11-11 at 21.52.45 (8).jpeg' },
-  { name: 'Bandes nettoyantes pores', category: 'Soin', price: 57, stockStatus: 'in-stock', stockDate: '10/11/2026', stockQuantity: 4, description: 'Bandes nettoyantes pour les pores du visage.', image: 'product/WhatsApp Image 2026-11-11 at 21.52.45 (4).jpeg' },
-  { name: "Shampooing huile d'argan", category: 'Cheveux', price: 47, stockStatus: 'in-stock', stockDate: '10/11/2026', stockQuantity: 2, description: "Shampooing nourrissant à l'huile d'argan.", image: 'product/WhatsApp Image 2026-11-11 at 21.52.45 (6).jpeg' },
-  { name: 'Shampooing Plex Repair', category: 'Cheveux', price: 47, stockStatus: 'in-stock', stockDate: '10/11/2026', stockQuantity: 2, description: 'Shampooing réparateur pour cheveux.', image: 'product/placeholder.jpg' },
-  { name: 'Masque Plex Repair', category: 'Cheveux', price: 50, stockStatus: 'in-stock', stockDate: '10/11/2026', stockQuantity: 4, description: 'Masque réparateur pour cheveux.', image: 'product/placeholder.jpg' },
-  { name: 'Gommage argile', category: 'Soin', price: 73, stockStatus: 'in-stock', stockDate: '10/11/2026', stockQuantity: 4, description: 'Gommage doux à l’argile.', image: 'product/WhatsApp Image 2026-11-11 at 21.52.45 (5).jpeg' },
+  { name: 'Gel nettoyant visage', category: 'Nettoyage', price: 66.84, description: 'Nettoie en douceur la peau et la laisse fraîche. / ينظف البشرة بلطف ويتركها منتعشة.', image: 'product/WhatsApp Image 2026-11-01 at 15.15.13.jpeg' },
+  { name: 'Lotion hydratante', category: 'Soin', price: 50.8, description: 'Lotion douce qui hydrate et apaise la peau. / لوشن لطيف يرطب البشرة ويساعد على تهدئتها.', image: 'product/WhatsApp Image 2026-11-01 at 15.16.48.jpeg' },
+  { name: 'Gel crème hygiénique', category: 'Hygiène', price: 34.76, description: 'Formule douce pour le confort et l’hygiène au quotidien. / تركيبة لطيفة للراحة والنظافة اليومية.', image: 'product/WhatsApp Image 2026-11-01 at 15.21.20.jpeg' },
+  { name: 'Tonique vitamine C', category: 'Soin', price: 85.56, description: 'Tonique qui rafraîchit la peau et lui donne de l’éclat. / تونر ينعش البشرة ويساعد على منحها إشراقة.', image: 'product/WhatsApp Image 2026-11-01 at 15.25.22.jpeg' },
+  { name: 'Parfum H&B Vanille', category: 'Parfum', price: 104.28, description: 'Parfum doux aux notes gourmandes de vanille. / عطر ناعم برائحة الفانيليا الحلوة والدافئة.', image: 'product/WhatsApp Image 2026-11-01 at 15.30.52.jpeg' },
+  { name: 'Vitamine C + Zinc', category: 'Soin', price: 52.14, description: 'Complément beauté pour accompagner votre routine quotidienne. / مكمل للعناية بالجمال لمرافقتك في روتينك اليومي.', image: 'product/WhatsApp Image 2026-11-01 at 15.34.25.jpeg' },
+  { name: 'Magnésium effervescent', category: 'Bien-être', price: 48, description: 'Comprimés effervescents à intégrer à votre routine bien-être. / أقراص فوارة يمكن إضافتها إلى روتين العناية بالصحة.', image: 'product/WhatsApp Image 2026-11-01 at 15.37.54.jpeg' },
+  { name: 'Eau de parfum Diamond', category: 'Parfum', price: 46, description: 'Un parfum élégant à porter au quotidien. / عطر أنيق مناسب للاستعمال اليومي.', image: 'product/WhatsApp Image 2026-11-01 at 15.40.01.jpeg' },
+  { name: 'Crème pour les pieds à l’urée', category: 'Soin des pieds', price: 29.41, description: 'Crème nourrissante pour des pieds doux et hydratés. / كريم مغذٍ للعناية بالقدمين وترطيبهما والحفاظ على نعومتهما.', image: 'product/WhatsApp Image 2026-11-01 at 15.43.10.jpeg' },
+  { name: 'Hydratant pour les pieds', category: 'Soin des pieds', price: 29.41, description: 'Soin hydratant pour des pieds doux et bien entretenus. / عناية مرطبة للقدمين تساعد على الحفاظ على نعومتهما.', image: 'product/WhatsApp Image 2026-11-01 at 15.45.47.jpeg' },
+  { name: 'Crème mains à l’aloe vera', category: 'Soin des mains', price: 33, description: 'Crème pour des mains douces et confortables. / كريم لليدين يساعد على منحهما النعومة والراحة.', image: 'product/WhatsApp Image 2026-11-01 at 15.48.01.jpeg' },
+  { name: 'Shampooing protecteur', category: 'Cheveux', price: 72.19, description: 'Shampooing qui aide à protéger les cheveux et à leur apporter de la brillance. / شامبو يساعد على حماية الشعر ومنحه مظهراً لامعاً.', image: 'product/WhatsApp Image 2026-11-01 at 15.50.47.jpeg' },
+  { name: 'Lotion corporelle', category: 'Corps', price: 70.86, description: 'Lotion hydratante pour une peau douce et souple. / لوشن مرطب لبشرة ناعمة ومرنة.', image: 'product/WhatsApp Image 2026-11-01 at 15.56.38.jpeg' },
+  { name: 'Déodorant crème', category: 'Hygiène', price: 45.45, description: 'Déodorant crème pour une sensation de fraîcheur au quotidien. / مزيل عرق كريمي يمنحك إحساساً بالانتعاش يومياً.', image: 'product/WhatsApp Image 2026-11-01 at 15.59.52.jpeg' },
+  { name: 'Bicarbonate blanchissant', category: 'Beauté', price: 34, description: 'Produit pratique à intégrer à votre routine beauté. / منتج عملي يمكن إضافته إلى روتين العناية بالجمال.', image: 'product/WhatsApp Image 2026-11-01 at 16.03.02.jpeg' },
+  { name: 'Blanchisseur dentaire', category: 'Hygiène', price: 48.13, description: 'Produit d’hygiène bucco-dentaire pour votre routine. / منتج للعناية بنظافة الفم والأسنان ضمن روتينك اليومي.', image: 'product/WhatsApp Image 2026-11-01 at 16.04.38.jpeg' },
+  { name: 'Parfum vanille', category: 'Parfum', price: 79, description: 'Une senteur douce et gourmande de vanille. / رائحة فانيليا ناعمة وحلوة.', image: 'product/WhatsApp Image 2026-11-01 at 16.08.39.jpeg' },
+  { name: 'Huile d’amande', category: 'Beauté', price: 90.91, description: 'Huile nourrissante pour prendre soin de la peau. / زيت مغذٍ للعناية بالبشرة.', image: 'product/WhatsApp Image 2026-11-01 at 16.12.26.jpeg' },
+  { name: 'Lotion pédicure', category: 'Soin', price: 140.37, description: 'Lotion de soin pour votre routine de pédicure. / لوشن للعناية بالقدمين ضمن روتين الباديكير.', image: 'product/WhatsApp Image 2026-11-01 at 16.18.59.jpeg' },
+  { name: 'Deo Roll-On Aloe', category: 'Hygiène', price: 31, description: 'Déodorant roll-on à l’aloe vera, facile à utiliser. / مزيل عرق رول أون بالألوفيرا سهل الاستعمال.', image: 'product/WhatsApp Image 2026-11-11 at 21.52.45.jpeg' },
+  { name: 'Lait nettoyant visage', category: 'Nettoyage', price: 41, description: 'Lait nettoyant doux pour le visage. / حليب منظف لطيف للوجه.', image: 'product/WhatsApp Image 2026-11-11 at 21.52.45 (1).jpeg' },
+  { name: "Masque huile d'argan", category: 'Soin', price: 55, description: "Masque nourrissant à l'huile d'argan. / قناع مغذٍ بزيت الأركان للعناية بالبشرة.", image: 'product/WhatsApp Image 2026-11-11 at 21.52.45 (2).jpeg' },
+  { name: 'Eau faciale avoine', category: 'Soin', price: 62, description: 'Eau faciale douce à l’avoine. / ماء وجه لطيف بالشوفان.', image: 'product/WhatsApp Image 2026-11-11 at 21.52.45 (3).jpeg' },
+  { name: 'Stick Jelly', category: 'Soin', price: 96, description: 'Soin visage pratique sous forme de stick jelly. / عناية عملية بالوجه على شكل ستيك جيلي.', image: 'product/placeholder.jpg' },
+  { name: 'Lotion anti-chute', category: 'Cheveux', price: 113, description: 'Lotion de soin pour le cuir chevelu et les cheveux. / لوشن للعناية بفروة الرأس والشعر.', image: 'product/WhatsApp Image 2026-11-11 at 21.52.45 (7).jpeg' },
+  { name: 'Shampooing anti-chute', category: 'Cheveux', price: 47, description: 'Shampooing de soin pour les cheveux. / شامبو للعناية بالشعر.', image: 'product/WhatsApp Image 2026-11-11 at 21.52.45 (8).jpeg' },
+  { name: 'Bandes nettoyantes pores', category: 'Soin', price: 57, description: 'Bandes nettoyantes pour les pores du visage. / شرائط لتنظيف مسام الوجه.', image: 'product/WhatsApp Image 2026-11-11 at 21.52.45 (4).jpeg' },
+  { name: "Shampooing huile d'argan", category: 'Cheveux', price: 47, description: "Shampooing nourrissant à l'huile d'argan. / شامبو مغذٍ بزيت الأركان للعناية بالشعر.", image: 'product/WhatsApp Image 2026-11-11 at 21.52.45 (6).jpeg' },
+  { name: 'Shampooing Plex Repair', category: 'Cheveux', price: 47, description: 'Shampooing réparateur pour les cheveux. / شامبو للعناية بالشعر وإصلاحه.', image: 'product/placeholder.jpg' },
+  { name: 'Masque Plex Repair', category: 'Cheveux', price: 50, description: 'Masque réparateur pour les cheveux. / قناع للعناية بالشعر وإصلاحه.', image: 'product/placeholder.jpg' },
+  { name: 'Gommage argile', category: 'Soin', price: 73, description: 'Gommage doux à l’argile pour le visage. / مقشر لطيف بالطين للعناية بالوجه.', image: 'product/WhatsApp Image 2026-11-11 at 21.52.45 (5).jpeg' },
 ];
 
 const productList = products;
@@ -105,11 +105,9 @@ const createProductModal = () => {
       modal.querySelector('#productDetailDescription').textContent = product.description;
       modal.querySelector('#productDetailPrice').textContent = formatPrice(product.price);
       const detailOrder = modal.querySelector('#productDetailOrder');
-      const isOnOrder = product.stockStatus === 'on-order';
-      detailOrder.textContent = isOnOrder ? 'Commander sur commande' : 'Commander sur WhatsApp';
+      detailOrder.textContent = 'Commander via WhatsApp';
       detailOrder.onclick = () => {
-        const orderStatus = isOnOrder ? ' sur commande' : '';
-        const message = encodeURIComponent(`Bonjour, je souhaite commander ${product.name}${orderStatus} au prix de ${formatPrice(product.price)}.`);
+        const message = encodeURIComponent(`Bonjour, je souhaite commander ${product.name} au prix de ${formatPrice(product.price)}.`);
         window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
       };
       modal.classList.add('show');
@@ -127,15 +125,10 @@ const formatPrice = (value) => {
 const createProductCard = (product) => {
   const card = document.createElement('article');
   card.className = 'product-card';
-  const isOnOrder = product.stockStatus === 'on-order';
-  const buttonText = `Bonjour, je souhaite commander ${product.name}${isOnOrder ? ' sur commande' : ''} au prix de ${formatPrice(product.price)}.`;
-  const stockLabel = isOnOrder ? 'Sur Commande' : 'En Stock';
-  const stockClass = isOnOrder ? 'is-on-order' : 'is-in-stock';
-  const stockDetails = product.stockDate ? `<p class="product-stock-details">Nouveau stock du ${product.stockDate}</p>` : '';
-  const stockQuantity = product.stockQuantity ? `<p class="product-stock-details">Quantité disponible : ${product.stockQuantity}</p>` : '';
+  const buttonText = `Bonjour, je souhaite commander ${product.name} au prix de ${formatPrice(product.price)}.`;
   card.innerHTML = `
-    <div class="product-image" aria-label="${product.name}"><img alt="${product.name}" class="product-image-img" /><div class="product-image-placeholder" hidden>Image bientôt</div><span class="product-stock-badge ${stockClass}">${stockLabel}</span></div>
-    <div class="product-info"><div class="product-meta"><span class="tag">${product.category}</span><span class="price">${formatPrice(product.price)}</span></div><h3>${product.name}</h3><p>${product.description}</p>${stockDetails}${stockQuantity}<div class="product-actions"><button class="order-btn" type="button">${isOnOrder ? 'Commander sur commande' : 'Commander via WhatsApp'}</button></div></div>`;
+    <div class="product-image" aria-label="${product.name}"><img alt="${product.name}" class="product-image-img" /><div class="product-image-placeholder" hidden>Image bientôt</div></div>
+    <div class="product-info"><div class="product-meta"><span class="tag">${product.category}</span><span class="price">${formatPrice(product.price)}</span></div><h3>${product.name}</h3><p>${product.description}</p><div class="product-actions"><button class="order-btn" type="button">Commander via WhatsApp</button></div></div>`;
   const image = card.querySelector('.product-image-img');
   setProductImage(image, product.image, card.querySelector('.product-image-placeholder'));
   card.querySelector('.order-btn').addEventListener('click', (event) => {
