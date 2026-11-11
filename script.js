@@ -39,7 +39,7 @@ const products = [
     category: 'Soin',
     price: 52.14,
     stockStatus: 'on-order',
-    description: 'Complément beauté pour un teint lumineux et une peau confortable. / مزيج مغذي يساعد على إضفاء لمعان طبيعي على البشرة ويحافظ على توازنها.',
+    description: 'Complément beauté pour un teint lumineux et une peau confortable. / مزيج مغذي يساعد على إضفاء لمعان طبيعي على البشرة ويحافظ على راحتها.',
   },
   {
     name: 'Magnésium effervescent',
@@ -47,6 +47,7 @@ const products = [
     price: 48,
     stockStatus: 'in-stock',
     stockDate: '10/11/2026',
+    stockQuantity: 4,
     description: 'Idéal pour un moment de bien-être au quotidien. / منتج مثالي لدعم الراحة اليومية والهدوء والنعاس.',
   },
   {
@@ -55,6 +56,7 @@ const products = [
     price: 46,
     stockStatus: 'in-stock',
     stockDate: '10/11/2026',
+    stockQuantity: 5,
     description: 'Parfum élégant et sensuel pour toute la journée. / عطر أنيق ورائع يمنحك الثقة والجاذبية طوال اليوم.',
   },
   {
@@ -77,6 +79,7 @@ const products = [
     price: 33,
     stockStatus: 'in-stock',
     stockDate: '10/11/2026',
+    stockQuantity: 4,
     description: 'Crème mains apaisante et protectrice pour une peau douce. / كريم يدين مهدئ ومرطب يساعد على حماية البشرة ونعومتها.',
   },
   {
@@ -106,6 +109,7 @@ const products = [
     price: 34,
     stockStatus: 'in-stock',
     stockDate: '10/11/2026',
+    stockQuantity: 4,
     description: 'Produit doux et efficace pour l’entretien quotidien. / منتج لطيف وفعال للعناية اليومية ويمنح البشرة مظهرًا مشرقًا.',
   },
   {
@@ -113,7 +117,7 @@ const products = [
     category: 'Hygiène',
     price: 48.13,
     stockStatus: 'on-order',
-    description: 'Pour un sourire plus éclatant et une sensation de propreté. / يساعد على إضفاء لمعان أبيض على الأسنان مع إحساس بالنظافة.',
+    description: 'Pour un sourire plus éclatant et une sensation de propreté. / يساعد على إضفاء لمع��ن أبيض على الأسنان مع إحساس بالنظافة.',
   },
   {
     name: 'Parfum vanille',
@@ -121,6 +125,7 @@ const products = [
     price: 79,
     stockStatus: 'in-stock',
     stockDate: '10/11/2026',
+    stockQuantity: 5,
     description: 'Senteur douce et gourmande qui accompagne votre routine quotidienne. / رائحة فانيلا دافئة وناعمة تضيف إحساسًا مريحًا وأنيقًا يوميًا.',
   },
   {
@@ -135,7 +140,7 @@ const products = [
     category: 'Soin',
     price: 140.37,
     stockStatus: 'on-order',
-    description: 'Soin ciblé pour un confort optimal et un esprit tranquille. / علاج متخصص يساعد على الحفاظ على الراحة والنظافة الصحية لفروة الرأس.',
+    description: 'Soin ciblé pour un confort optimal et un esprit tranquille. / علاج متخصص يساعد على الحفاظ على الراحة والنظافة الصحية لفروة القدمين.',
   },
   {
     name: 'Deo Roll-On Aloe',
@@ -143,6 +148,7 @@ const products = [
     price: 31,
     stockStatus: 'in-stock',
     stockDate: '10/11/2026',
+    stockQuantity: 10,
     description: 'Déodorant roll-on à l’aloe vera.',
   },
   {
@@ -151,6 +157,7 @@ const products = [
     price: 41,
     stockStatus: 'in-stock',
     stockDate: '10/11/2026',
+    stockQuantity: 4,
     description: 'Lait nettoyant doux pour le visage.',
   },
   {
@@ -159,6 +166,7 @@ const products = [
     price: 55,
     stockStatus: 'in-stock',
     stockDate: '10/11/2026',
+    stockQuantity: 2,
     description: "Masque nourrissant à l'huile d'argan.",
   },
   {
@@ -167,6 +175,7 @@ const products = [
     price: 62,
     stockStatus: 'in-stock',
     stockDate: '10/11/2026',
+    stockQuantity: 4,
     description: 'Eau faciale douce à l’avoine.',
   },
   {
@@ -175,6 +184,7 @@ const products = [
     price: 96,
     stockStatus: 'in-stock',
     stockDate: '10/11/2026',
+    stockQuantity: 2,
     description: 'Soin visage en stick jelly.',
   },
   {
@@ -183,6 +193,7 @@ const products = [
     price: 113,
     stockStatus: 'in-stock',
     stockDate: '10/11/2026',
+    stockQuantity: 4,
     description: 'Lotion de soin pour cheveux.',
   },
   {
@@ -191,6 +202,7 @@ const products = [
     price: 47,
     stockStatus: 'in-stock',
     stockDate: '10/11/2026',
+    stockQuantity: 4,
     description: 'Shampooing de soin pour cheveux.',
   },
   {
@@ -199,6 +211,7 @@ const products = [
     price: 57,
     stockStatus: 'in-stock',
     stockDate: '10/11/2026',
+    stockQuantity: 4,
     description: 'Bandes nettoyantes pour les pores du visage.',
   },
   {
@@ -207,6 +220,7 @@ const products = [
     price: 47,
     stockStatus: 'in-stock',
     stockDate: '10/11/2026',
+    stockQuantity: 2,
     description: "Shampooing nourrissant à l'huile d'argan.",
   },
   {
@@ -215,6 +229,7 @@ const products = [
     price: 47,
     stockStatus: 'in-stock',
     stockDate: '10/11/2026',
+    stockQuantity: 2,
     description: 'Shampooing réparateur pour cheveux.',
   },
   {
@@ -223,6 +238,7 @@ const products = [
     price: 50,
     stockStatus: 'in-stock',
     stockDate: '10/11/2026',
+    stockQuantity: 4,
     description: 'Masque réparateur pour cheveux.',
   },
   {
@@ -231,6 +247,7 @@ const products = [
     price: 73,
     stockStatus: 'in-stock',
     stockDate: '10/11/2026',
+    stockQuantity: 4,
     description: 'Gommage doux à l’argile.',
   },
 ];
@@ -410,6 +427,9 @@ const createProductCard = (product) => {
   const stockDetails = product.stockDate
     ? `<p class="product-stock-details">Nouveau stock du ${product.stockDate}</p>`
     : '';
+  const stockQuantity = product.stockQuantity
+    ? `<p class="product-stock-details">Quantité disponible : ${product.stockQuantity}</p>`
+    : '';
   const imageMarkup = product.image
     ? `<img src="${product.image}" alt="${product.name}" class="product-image-img" />`
     : '<div class="product-image-placeholder">Image bientôt</div>';
@@ -424,8 +444,9 @@ const createProductCard = (product) => {
       <h3>${product.name}</h3>
       <p>${product.description}</p>
       ${stockDetails}
+      ${stockQuantity}
       <div class="product-actions">
-        <button class="order-btn" type="button">${isOnOrder ? 'Commander sur commande' : 'Commander sur WhatsApp'}</button>
+        <button class="order-btn" type="button">${isOnOrder ? 'Commander sur commande' : 'Commander via WhatsApp'}</button>
       </div>
     </div>
   `;
