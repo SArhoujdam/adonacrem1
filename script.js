@@ -27,8 +27,8 @@ const products = [
   { name: 'Shampooing anti-chute', category: 'Cheveux', price: 47, description: 'Shampooing de soin pour les cheveux. / شامبو للعناية بالشعر.', image: 'product/WhatsApp Image 2026-11-11 at 21.52.45 (8).jpeg' },
   { name: 'Bandes nettoyantes pores', category: 'Soin', price: 57, description: 'Bandes nettoyantes pour les pores du visage. / شرائط لتنظيف مسام الوجه.', image: 'product/WhatsApp Image 2026-11-11 at 21.52.45 (4).jpeg' },
   { name: "Shampooing huile d'argan", category: 'Cheveux', price: 47, description: "Shampooing nourrissant à l'huile d'argan. / شامبو مغذٍ بزيت الأركان للعناية بالشعر.", image: 'product/WhatsApp Image 2026-11-11 at 21.52.45 (6).jpeg' },
-  { name: 'Shampooing Plex Repair', category: 'Cheveux', price: 47, description: 'Shampooing réparateur pour les cheveux. / شامبو للعناية بالشعر وإصلاحه.', image: 'product/placeholder.jpg' },
-  { name: 'Masque Plex Repair', category: 'Cheveux', price: 50, description: 'Masque réparateur pour les cheveux. / قناع للعناية بالشعر وإصلاحه.', image: 'product/placeholder.jpg' },
+  { name: 'Shampooing Plex Repair', category: 'Cheveux', price: 47, description: 'Shampooing réparateur pour les cheveux. / شامبو للعناية بالشعر وإصلاحه.', image: 'product/WhatsApp Image 2026-11-11 at 21.52.45 (10).jpeg' },
+  { name: 'Masque Plex Repair', category: 'Cheveux', price: 50, description: 'Masque réparateur pour les cheveux. / قناع للعناية بالشعر وإصلاحه.', image: 'product/WhatsApp Image 2026-11-11 at 21.52.45 (9).jpeg' },
   { name: 'Gommage argile', category: 'Soin', price: 73, description: 'Gommage doux à l’argile pour le visage. / مقشر لطيف بالطين للعناية بالوجه.', image: 'product/WhatsApp Image 2026-11-11 at 21.52.45 (5).jpeg' },
 ];
 
